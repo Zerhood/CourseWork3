@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-telegrambot-table
+      author: Zerhood (generated)
+      changes:
+        - createTable:
+            tableName: notification_task
+            columns:
+              - column:
+                  name: id
+                  type: INTEGER
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: message-pkey
+                    nullable: false
+              - column:
+                  name: chat_id
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: text
+                  type: VARCHAR(255)
+              - column:
+                  name: date
+                  type: DATETIME
